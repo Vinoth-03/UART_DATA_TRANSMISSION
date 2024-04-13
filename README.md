@@ -19,10 +19,10 @@ An Arduino sketch that is crucial for receiving data from the PC, storing it in 
 ## Getting Started
 
 ### Prerequisites
-- Python 3.x
-- Arduino Uno or a compatible board
-- USB cable for PC connection
-- USB to UART converter
+- Python 3.x installed on your PC.
+- An Arduino Uno or a compatible microcontroller board.
+- A standard USB cable to establish a connection with the PC.
+- A USB to UART bridge for smooth communication
 
 ### Installation and Operation
 1. Connect the Arduino Uno to the PC using the USB cable.
