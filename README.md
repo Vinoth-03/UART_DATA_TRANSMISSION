@@ -1,42 +1,42 @@
-# UART Data Transmission Firmware
+# UART Data Transmission 
 
-Welcome to the UART Data Transmission repository! This project is all about seamless and efficient communication between a personal computer (PC) and an Arduino UNO microcontroller. Using the Universal Asynchronous Receiver-Transmitter (UART) protocol, this firmware facilitates not just the transfer of text data but also measures the speed of data flow in real-time.
+Welcome to the UART Data Transmission repository! This project is dedicated to enabling bidirectional data communication between a PC and an Arduino UNO using the UART protocol. It's designed to not only transfer text data efficiently but also to measure the data transmission speed in real-time.
 
 ## Project Structure
 
-### `FinalPC.py`
-A Python script that takes the lead in sending text data to the Arduino, character by character. It's smart enough to calculate and display the data transmission and reception rates in bits per second.
+### `TransmissionPC.py`
+A Python script that is responsible for sending text data to the Arduino, one character at a time. It also measures and displays the data transmission and reception speeds in bits per second.
 
-### `FinalMCU.ino`
-An Arduino sketch that plays a crucial role in receiving data from the PC, safeguarding it within the EEPROM, and echoing it back when asked.
+### `TransmissionMCU.ino`
+An Arduino sketch that is crucial for receiving data from the PC, storing it in EEPROM, and sending it back upon request.
 
 ## Directory Contents
 
-- **FinalPC**: This directory is the command center for the PC-side operations, housing the `FinalPC.py` script.
+- **TransmissionPC**: This directory contains the PC-side script, `TransmissionPC.py`, which manages data transmission and displays received data.
 
-- **FinalMCU**: Consider this the brain of the microcontroller unit, containing the `FinalMCU.ino` sketch written in Embedded C/C++.
+- **TransmissionMCU**: This directory contains the MCU firmware, `TransmissionMCU.ino`, written in Embedded C/C++, which handles data reception, storage, and transmission.
 
 ## Getting Started
 
 ### Prerequisites
-- Python 3.x installed on your PC.
-- An Arduino Uno or a compatible microcontroller board.
-- A standard USB cable to establish a connection with the PC.
-- A USB to UART bridge for smooth communication.
+- Python 3.x
+- Arduino Uno or a compatible board
+- USB cable for PC connection
+- USB to UART converter
 
 ### Installation and Operation
-1. Begin by connecting the Arduino Uno to your PC using the USB cable.
-2. Flash the `FinalMCU.ino` onto your Arduino to breathe life into it.
-3. Fire up the `FinalPC.py` script on your PC to start the conversation.
-4. Double-check that you've selected the right COM port in the script for your Arduino.
+1. Connect the Arduino Uno to the PC using the USB cable.
+2. Upload the `TransmissionMCU.ino` sketch to the Arduino Uno.
+3. Run the `TransmissionPC.py` script on the PC.
+4. Make sure the correct COM port for the Arduino Uno is specified in the script.
 
-## A Note to the Users
-We've taken a minimalist approach here, avoiding the use of any pre-cooked libraries like `EEPROM.h`. Every function related to EEPROM operations is crafted from scratch, giving you a lean and mean codebase.
+## Note
+The Arduino code provided avoids the use of standard libraries such as `EEPROM.h`. All EEPROM read and write functionalities are implemented from the ground up, without external libraries.
 
-
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
-A shoutout to all UART enthusiasts and the open-source community for the inspiration and support.
-
+Thanks to the UART community and all contributors who have made this project possible.
 
 
